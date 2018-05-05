@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="slidebox">
+    <ion-slides loop="false" pager>
+      <ion-slide *ngFor="let item of cards">
+        <ion-card>
+          <img src="assets/imgs/{{item.image}}" />
+          <div class="card-title">{{item.title}}</div>
+          <div class="card-subtitle">{{item.subTitle}}</div>
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>

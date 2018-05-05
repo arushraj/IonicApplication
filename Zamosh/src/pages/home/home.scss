@@ -1,0 +1,39 @@
+page-home {}
+
+.slidebox {
+    
+    margin-top: 5px;
+    ion-card {
+        position: relative;
+        text-align: center;
+    }
+    .card-title {
+        position: absolute;
+        top: 36%;
+        font-size: 2.0em;
+        width: 100%;
+        font-weight: bold;
+        color: #fff;
+    }
+    .card-subtitle {
+        font-size: 1.0em;
+        position: absolute;
+        top: 52%;
+        width: 100%;
+        color: #fff;
+    }
+}
+// .swiper-container-horizontal > .swiper-pagination-bullets{
+//     bottom: -3px;
+// }
+
+// .slidebox {
+//     ion-slide {
+//         padding-right: 1%;
+//         width: 99.5% !important;
+//     }
+//     ion-slide:last-child {
+//         padding-right: 0px;
+//         width: 106% !important;
+//     }
+// }
