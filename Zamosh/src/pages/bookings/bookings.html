@@ -1,0 +1,21 @@
+<ion-header>
+    <ion-navbar color="dark">
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>{{pageTitle}}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding-top>
+    <ion-segment [(ngModel)]="selectedTab" color="dark">
+        <ion-segment-button *ngFor="let item of pageTabs" value="{{item.id}}" (ionSelect)="currentSegment(item.id)">
+            {{item.tabName}}
+        </ion-segment-button>
+    </ion-segment>
+    <ion-slides loop="false" pager #SwipedTabsSlider (ionSlideDidChange)="currentSlide()">
+        <ion-slide *ngFor="let item of pageTabs">
+            {{item.tabName}}
+        </ion-slide>
+    </ion-slides>
+</ion-content>
