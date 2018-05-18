@@ -9,14 +9,27 @@
 
 <ion-content>
   <div class="slidebox">
-    <ion-slides loop="true" pager autoplay="3000" effect="coverflow" speed="500">
-      <ion-slide *ngFor="let item of cards">
+    <ion-slides loop="false" pager effect="coverflow" speed="600">
+      <ion-slide *ngFor="let item of banners">
         <ion-card>
-          <img src="assets/imgs/{{item.image}}" />
-          <div class="card-title">{{item.title}}</div>
-          <div class="card-subtitle">{{item.subTitle}}</div>
+          <img src="{{item}}" />
         </ion-card>
       </ion-slide>
     </ion-slides>
+  </div>
+  <div padding>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <div>1 of 3</div>
+        </ion-col>
+        <ion-col>
+          <div>2 of 3</div>
+        </ion-col>
+        <ion-col>
+          <div>3 of 3</div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </div>
 </ion-content>

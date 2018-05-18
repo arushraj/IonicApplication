@@ -27,7 +27,7 @@ export class BookingsPage {
     }
 
     currentSlide() {
-        if ((this.SwipedTabsSlider.getActiveIndex() + 1) === 1 || (this.SwipedTabsSlider.getActiveIndex() + 1) === 2)
+        if (this.SwipedTabsSlider.getActiveIndex() < 2)
             this.selectedTab = (this.SwipedTabsSlider.getActiveIndex() + 1).toString();
     }
 }

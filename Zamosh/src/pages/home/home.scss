@@ -1,7 +1,6 @@
 page-home {}
 
 .slidebox {
-    
     margin-top: 5px;
     ion-card {
         position: relative;
@@ -23,17 +22,24 @@ page-home {}
         color: #fff;
     }
 }
-// .swiper-container-horizontal > .swiper-pagination-bullets{
-//     bottom: -3px;
-// }
 
-// .slidebox {
-//     ion-slide {
-//         padding-right: 1%;
-//         width: 99.5% !important;
-//     }
-//     ion-slide:last-child {
-//         padding-right: 0px;
-//         width: 106% !important;
-//     }
+// .card-title {
+//     background-color: #444;
+//     opacity: 0.5;
+//     top: 75% !important;
 // }
+ion-col{
+    background-color: #f0f5ff;
+}
+ion-col div {
+    background-color: #f0f5ff;
+    border: 1px solid #e6e9ee;
+    border-radius: 2px;
+    padding: 5px;
+    text-align: center;
+  }
+
+  p {
+    padding: 10px 0 0 10px !important;
+    margin: 0;
+  }
