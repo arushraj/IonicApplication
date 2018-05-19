@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { NavController, LoadingController } from 'ionic-angular';
 import { HTTP } from '@ionic-native/http'
 
@@ -30,12 +30,14 @@ export class HomePage {
     this.loader = this.loading.create({ content: 'Loading rate list...' });
     this.loader.present();
     let url: any = this.appConstant.getAPIURL(this.appConstant.APP_URL_NAME.SERVICERATEURL);
+    //let url: any = this.appConstant.getAPIURL('http://localhost:8080/notes');
     this.http.get(url.URL, {}, {}).then(data => {
+      console.log(JSON.stringify(data));
       if (data)
         this.rateCardList = data.data;
       this.loader.dismiss();
     }).catch(error => {
-      console.log(error);
+      console.log(JSON.stringify(error));
       this.rateCardList = error;
       this.loader.dismiss();
     });
